@@ -37,12 +37,12 @@ namespace BinarySearchTree.Tests
                 yield return new TestCaseData(
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
                         new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
                         new Book(null, "19asfas84", "Secker and Warburg"),
                         new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
                         new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
                         new Book("Sidorenko", "1safas984", "Secker and Warburg")
                     },
                     new Book[]
@@ -75,6 +75,55 @@ namespace BinarySearchTree.Tests
                         new Book("Nikita", "198asf4", "Secker and Warburg"),
                         new Book("Sidorenko", "1safas984", "Secker and Warburg")
                     });
+            }
+        }
+
+        public static IEnumerable<TestCaseData> TestCasesBookWithComparer
+        {
+            get
+            {
+                yield return new TestCaseData(
+                    new Book[]
+                    {
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                    },
+                    new Book[]
+                    {
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                    },
+                    new Book[]
+                    {
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                    },
+                    new Book[]
+                    {
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book(null, "19asfas84", "Secker and Warburg"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                    },
+                    new BookAuthorComparer());
             }
         }
     }

@@ -149,5 +149,14 @@ namespace BinarySearchTree.Tests
             CollectionAssert.AreEqual(tree.LNR(), LNR);
             CollectionAssert.AreEqual(tree.LRN(), LRN);
         }
+
+        [TestCaseSource(typeof(DataSource), nameof(DataSource.TestCasesBookWithComparer))]
+        public void ComparerBookWithComparer_Test(Book[] source, Book[] NLR, Book[] LNR, Book[] LRN, BookAuthorComparer comparer)
+        {
+            var tree = new TreeCollection<Book>(source, comparer);
+            CollectionAssert.AreEqual(tree.NLR(), NLR);
+            CollectionAssert.AreEqual(tree.LNR(), LNR);
+            CollectionAssert.AreEqual(tree.LRN(), LRN);
+        }
     }
 }
