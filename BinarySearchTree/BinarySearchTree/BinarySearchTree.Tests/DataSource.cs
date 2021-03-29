@@ -3,6 +3,8 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TimeStruct;
+using TimeStruct.TimeStruct;
 
 namespace BinarySearchTree.Tests
 {
@@ -37,43 +39,43 @@ namespace BinarySearchTree.Tests
                 yield return new TestCaseData(
                     new Book[]
                     {
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000")
                     });
             }
         }
@@ -85,45 +87,85 @@ namespace BinarySearchTree.Tests
                 yield return new TestCaseData(
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000"),
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005")
                     },
                     new Book[]
                     {
-                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg"),
-                        new Book("ABCDEFG", "fas1984", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book(null, "19asfas84", "Secker and Warburg"),
-                        new Book("Nikita", "198asf4", "Secker and Warburg"),
-                        new Book("Sidorenko", "1safas984", "Secker and Warburg")
+                        new Book(null, "19asfas84", "Secker and Warburg", "000000000002"),
+                        new Book("Sidorenko", "1safas984", "Secker and Warburg", "000000000006"),
+                        new Book("Джорджа Оруэлла", "19das84", "Secker and Warburg", "000000000005"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000004"),
+                        new Book("Nikita", "198asf4", "Secker and Warburg", "000000000003"),
+                        new Book("ABCDEFG", "fas1984", "Secker and Warburg", "000000000001"),
+                        new Book(null, "19asfas84", "Secker and Warburg","000000000000")
                     },
-                    new BookAuthorComparer());
+                new BookAuthorComparer());
+            }
+        }
+        public static IEnumerable<TestCaseData> TestCasesTimeStruct
+        {
+            get
+            {
+                yield return new TestCaseData(
+                    new Time[]
+                    {
+                        new Time(32, 3124),     
+                        new Time(15120, 123),
+                        new Time(-10, 3),
+                        new Time(10, -3),
+                        new Time(140, -5123)
+                    },
+                    new Time[]
+                    {
+                        new Time(32, 3124),
+                        new Time(15120, 123),
+                        new Time(10, -3),
+                        new Time(140, -5123),
+                        new Time(-10, 3)
+                    }, 
+                    new Time[]
+                    {
+                        new Time(15120, 123),
+                        new Time(140, -5123),
+                        new Time(10, -3),
+                        new Time(32, 3124),
+                        new Time(-10, 3)
+                    },
+                    new Time[]
+                    {
+                        new Time(140, -5123),
+                        new Time(10, -3),
+                        new Time(15120, 123),
+                        new Time(-10, 3),
+                        new Time(32, 3124)
+                    },
+                new TimeComparer());
             }
         }
     }
